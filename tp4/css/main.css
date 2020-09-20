@@ -20,7 +20,6 @@ header {
 	background-color: white;
 }
 
-
 h1 {
 	font-size  : 2.5rem;
 	font-weight: bold;
@@ -110,7 +109,7 @@ footer>a {
 	text-decoration: none;
 }
 
-@media only screen and (max-width:860px) {
+@media (max-width:860px) {
 
 	/*#######################################################################*/
 	/* Encabezado */
@@ -150,7 +149,7 @@ footer>a {
 	}
 }
 
-@media only screen and (max-width:600px) {
+@media (max-width:600px) {
 	h1 {
 		display: none;
 	}
