@@ -1,0 +1,89 @@
+main form {
+	text-align   : center;
+	margin       : 0 10%;
+	padding      : 25px;
+	border-style : solid;
+	border-color : grey;
+	border-radius: 25px;
+	box-shadow   : 5px 5px 4px 4px rgb(95, 95, 95);
+}
+
+.container {
+	display              : grid;
+	grid-template-columns: 9% 41.5% 41.5% 0;
+	grid-gap             : 2%;
+}
+
+label {
+	color      : #339fff;
+	text-align : center;
+	grid-column: 1;
+}
+
+textarea {
+	margin       : 10px 0 25px 0;
+	resize       : none;
+	border       : none;
+	border-bottom: 1px solid;
+	grid-column  : 2 / span 2;
+}
+
+.izq {
+	border       : none;
+	border-bottom: 1px solid;
+	grid-column  : 2;
+}
+
+.der {
+	border       : none;
+	border-bottom: 1px solid;
+	grid-column  : 3;
+}
+
+.doble {
+	border       : none;
+	border-bottom: 1px solid;
+	grid-column  : 2 / span 2;
+}
+
+.boton {
+	padding            : 8px 32px;
+	text-align         : center;
+	text-decoration    : none;
+	display            : inline-block;
+	font-size          : 16px;
+	margin             : 4px 2px;
+	transition-duration: 0.4s;
+	cursor             : pointer;
+
+	background-color: white;
+	color           : black;
+	border          : 2px solid #4CAF50;
+	border-radius   : 10px;
+}
+
+.boton:hover {
+	background-color: #4CAF50;
+	/* Green */
+	color           : white;
+}
+
+@media (max-width:600px) {
+	.container {
+		display: block;
+	}
+
+	.container label {
+		display: none;
+	}
+	
+	textarea, .izq, .der, .doble {
+		width: 100%;
+		margin: 2% 0;
+		grid-column  : none;
+	}
+
+	textarea {
+		height: 100px;
+	}
+}

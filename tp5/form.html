@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/main.css" />
+	<link rel="stylesheet" href="css/form.css">
+	<script type="text/javascript" src="script/menu.js"></script>
+	<title>Chocolates</title>
+</head>
+
+<body>
+	<header>
+		<h1>Chocolates</h1>
+
+		<div class="cinta-con">
+			<div class="cinta-der"></div>
+			<div class="cinta-izq"></div>
+		</div>
+
+		<div class="barra">
+			<a>Chocolates</a>
+			<a href="javascript:void(0);" class="ic fa fa-bars" onclick="myFunction()"></a>
+		</div>
+
+		<nav class="inv" id="myTopnav">
+			<a href="index.html">inicio</a>
+			<a href="about.html">Acerca de nosotros</a>
+			<a href="contact.html">Contacto</a>
+			<a href="form.html">Registrese</a>
+			<a href="location.html">Sucursales</a>
+			<a href="client.html">Clientes</a>
+		</nav>
+	</header>
+
+	<main>
+		<br />
+		<form action="show_data.html" target="_blank">
+			<div class="container">
+				<label class="fa fa-2x fa-user"></label>
+				<input class="izq" type="text" name="firstname" placeholder="Ingrese su nombre aqui...">
+				<input class="der" type="text" name="lastname" placeholder="Ingrese su apellido aqui...">
+				<label class="fa fa-2x fa-envelope"></label>
+				<input class="doble" type="email" name="email" placeholder="Ingrese su e-mail aqui...">
+				<label class="fa fa-2x fa-key"></label>
+				<input class="izq" type="password" name="password" placeholder="Ingrese su contraseña aqui...">
+				<input class="der" type="password" name="password" placeholder="Repita su contraseña aqui...">
+				<label class="fa fa-2x fa-pencil-square"></label>
+				<textarea class="doble" name="comentarios" placeholder="Escribe aquí un reseña sobre ud."></textarea>
+			</div>
+			<input class="boton" type="submit" value="Enviar">
+		</form>
+		<br />
+	</main>
+
+
+	<footer>
+ 		<a class="fa fa-2x fa-inverse fa-twitter" href="https://twitter.com"></a>
+		<a class="fa fa-2x fa-inverse fa-facebook" href="https://es-la.facebook.com"></a>
+		<a class="fa fa-2x fa-inverse fa-pinterest" href="https://ar.pinterest.com"></a>
+		<a class="fa fa-2x fa-inverse fa-instagram" href="https://www.instagram.com"></a>
+		<a class="fa fa-2x fa-inverse fa-linkedin" href="https://www.linkedin.com"></a>
+
+		<p>Derechos reservados @2020</p>
+		<br />
+	</footer>
+</body>
+
+</html>

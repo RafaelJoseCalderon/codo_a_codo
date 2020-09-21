@@ -1,0 +1,193 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
+
+html {
+	overflow-y: scroll;
+	height    : 100%;
+}
+
+body {
+	margin: 0;
+}
+
+/*###########################################################################*/
+/* Encabezado */
+header {
+	position        : fixed;
+	top             : 0;
+	width           : 175px;
+	z-index         : 99999;
+	width           : 100%;
+	background-color: white;
+}
+
+h1 {
+	font-size  : 2.5rem;
+	font-weight: bold;
+	text-align : center;
+	text-shadow: 1.2px 1.2px 1.2px #000;
+
+	width  : 90%;
+	margin : 5px auto;
+	padding: 40px 0;
+
+	border-style: solid;
+	color       : #cc8870;
+	box-shadow  : 0px 0px 1px 1px rgba(101, 63, 50, 0.45);
+}
+
+nav {
+	width          : 88%;
+	margin         : 0 auto;
+	display        : flex;
+	justify-content: space-around;
+	background     : #653f32;
+	position       : relative;
+	border-style   : solid;
+	border-width   : 1px;
+	border-color   : white;
+}
+
+nav a {
+	display        : inline-block;
+	width          : 100%;
+	background     : #653f32;
+	color          : white;
+	padding        : 5px 0;
+	text-align     : center;
+	text-decoration: none;
+	font-size      : 0.8em;
+}
+
+nav a:hover {
+	background: #cc8870;
+}
+
+.barra {
+	display: none;
+}
+
+.cinta-con {
+	width          : 90%;
+	height         : 30px;
+	margin         : 0 auto;
+	display        : flex;
+	margin-bottom  : -25px;
+	justify-content: space-between;
+}
+
+.cinta-der {
+	display   : inline-block;
+	height    : 30px;
+	width     : 40px;
+	background: #653f32;
+}
+
+.cinta-izq {
+	display   : inline-block;
+	height    : 30px;
+	width     : 40px;
+	background: #653f32;
+}
+
+/*###########################################################################*/
+/* Cuerpo */
+main {
+	margin    : 0 10%;
+	margin-top: 175px;
+}
+
+/*###########################################################################*/
+/* Pie de paguina */
+footer {
+	background-color: #653f32;
+	text-align      : center;
+	padding-top     : 5px;
+}
+
+footer>a {
+	text-decoration: none;
+}
+
+@media (max-width:860px) {
+
+	/*#######################################################################*/
+	/* Encabezado */
+	h1 {
+		width       : 100%;
+		padding     : 20px 0;
+		border-style: none;
+		box-shadow  : none;
+	}
+
+	nav {
+		width       : 100%;
+		height      : 25px;
+		border-style: none;
+	}
+
+	nav a {
+		font-size: 0.66em;
+	}
+
+	.cinta-con {
+		display: none;
+	}
+
+	.cinta-der {
+		display: none;
+	}
+
+	.cinta-izq {
+		display: none;
+	}
+
+	/*#######################################################################*/
+	/* cuerpo */
+	main {
+		margin-top: 125px;
+	}
+}
+
+@media (max-width:600px) {
+	h1 {
+		display: none;
+	}
+
+	.barra {
+		margin         : 0 0;
+		display        : flex;
+		justify-content: space-between;
+		background     : #653f32;
+		position       : relative;
+	}
+
+	.barra>a {
+		padding        : 20px;
+		color          : white;
+		text-decoration: none;
+	}
+
+	.barra>a.ic:hover {
+		background: #cc8870;
+	}
+
+	nav.inv {
+		display: none;
+	}
+
+	nav.vis {
+		display: block;
+	}
+
+	nav a {
+		padding   : 5px;
+		text-align: left;
+		background: #835748;
+	}
+
+	/*#######################################################################*/
+	/* cuerpo */
+	main {
+		margin-top: 60px;
+	}
+}

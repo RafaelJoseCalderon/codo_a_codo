@@ -1,0 +1,12 @@
+img {
+	display: block;
+	margin: auto;
+	height: 231px;
+}
+
+main a {
+	background: grey;
+	text-decoration: none;
+	padding: 5px;
+	border-radius: 3px;
+}
