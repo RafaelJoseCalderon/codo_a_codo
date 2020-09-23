@@ -1,0 +1,3 @@
+Mi celular		->	 960 x 540
+Tablet Tomas	->	1024 x 600
+Monitor			->	1366 x 768

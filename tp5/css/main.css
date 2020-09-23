@@ -1,12 +1,15 @@
 @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
 
-html {
-	overflow-y: scroll;
-	height    : 100%;
+html, body {
+	height: 100%;
+	margin: 0;
 }
 
 body {
-	margin: 0;
+	display        : flex;
+	flex-direction : column;
+	justify-content: space-between;
+	background     : white;
 }
 
 /*###########################################################################*/
@@ -23,6 +26,7 @@ header {
 h1 {
 	font-size  : 2.5rem;
 	font-weight: bold;
+	font-style : italic;
 	text-align : center;
 	text-shadow: 1.2px 1.2px 1.2px #000;
 
@@ -93,7 +97,11 @@ nav a:hover {
 /* Cuerpo */
 main {
 	margin    : 0 10%;
-	margin-top: 175px;
+	margin-top: 180px;
+}
+
+main p {
+	text-align: justify;
 }
 
 /*###########################################################################*/
@@ -108,7 +116,8 @@ footer>a {
 	text-decoration: none;
 }
 
-@media (max-width:860px) {
+@media (max-width: 1024px) and (orientation:landscape),
+(max-width: 600px) and (orientation:portrait) {
 
 	/*#######################################################################*/
 	/* Encabezado */
@@ -148,7 +157,9 @@ footer>a {
 	}
 }
 
-@media (max-width:600px) {
+@media (max-width: 960px) and (orientation:landscape),
+(max-width: 540px) and (orientation:portrait) {
+
 	h1 {
 		display: none;
 	}
