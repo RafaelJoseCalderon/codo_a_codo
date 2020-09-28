@@ -1,15 +1,26 @@
+/* Nota: no tomo monitore "retrato", no es imposible, pero es poco probable*/
+/*       -> cuando una region es definida con un @media, la proxima region
+			debe ser incluida o igual (matematico estricto), de lo contrario
+			no es posible, dentro de la inrecepción, determinar que tipo de
+			maquetación ha de ser aplicada */
+
+/* Nota: presenta problemas el alto de la fila (row) main, haré trampa, se
+         fijara segun la página, que lo precise*/
+/*       -> ni idea*/
+
+/* las fuentes no amplian exactamente de manera proporcional en firefox*/
+/*       -> precindiendo del margen y el padding el lo que rodea a textos,
+            se fuerza a mantener proporcionalidad, no en todo claro*/
+
 html {
-	user-zoom: 1;
-	min-zoom : 1;
-	max-zoom : 1;
-	height   : 100%;
+	height: 100%;
 }
 
 body {
+	margin: 0;
+
 	display              : grid;
-	margin               : 0;
-	height               : 100%;
-	grid-template-rows   : 22.5% 5% auto 12.5%;
+	grid-template-rows   : 8.5rem 2.25rem auto 8.5rem;
 	grid-template-columns: repeat(4, 25%);
 	grid-template-areas  :
 		"header header header header"
@@ -18,46 +29,230 @@ body {
 		"footer footer footer footer";
 }
 
-header { grid-area: header; }
-nav    { grid-area: nav;    }
-main   { grid-area: main;   }
-footer { grid-area: footer; }
+header {
+	grid-area: header;
 
-header, nav, main, footer {
-	background: wheat;
+	width : 90%;
+	height: 8rem;
+	margin: 0.3rem 5% 0.2rem 5%;
+
+	border-style: solid;
+	border-width: 0.1rem;
+
+	color     : #cc8870;
+	background: white;
+	box-shadow: 0 0 0.125rem 0.125rem rgba(101, 63, 50, 0.45);
+
+	/*cochinada para centrar texto*/
+	display: flex;
+}
+
+h1 {
+	margin: auto;
+
+	font-size  : 2.5rem;
+	font-weight: bold;
+	font-style : italic;
+
+	text-shadow: 0.2rem 0.2rem 0.2rem #000;
+}
+
+.icono {
+	display: none;
+}
+
+nav {
+	grid-area: nav;
+	position : sticky;
+	top      : 0;
+	margin   : 0 5%;
+
+	background: #855d4f;
+
+	/*lo que hay hacer para redondear una puta barrita*/
+	border-style : solid;
+	border-width : 1px;
+	border-radius: 36px;
+	border-color : #855d4f;
+}
+
+.botonera {
+	display              : grid;
+	grid-template-rows   : auto;
+	grid-template-columns: repeat(6, auto);
+
+	height: 100%;
+}
+
+.botonera a {
+	/*cochinada para centrar texto*/
+	display        : flex;
+	justify-content: center;
+	flex-direction : column;
+
+	margin    : 2px;
+	background: #7e5647;
+	color     : white;
+
+	border-style : solid;
+	border-width : 1px;
+	border-radius: 30px;
+	border-color : white;
+
+	text-decoration: none;
+	text-align     : center;
+	font-size      : 0.8rem;
+}
+
+.botonera a:hover {
+	background: #cc8870;
+}
+
+main {
+	grid-area   : main;
+	margin      : 0 5%;
+	background  : rgb(255, 127, 127);
 	border-style: solid;
 	border-width: 1px;
 }
 
-@media	(max-width: 1280px) and (orientation:landscape),
-		(max-width: 800px) and (orientation:portrait) {
+footer {
+	grid-area: footer;
+
+	text-decoration: none;
+
+	background-color: #855d4f;
+
+	/*cochinada para centrar texto*/
+	display       : flex;
+	flex-direction: column;
+}
+
+footer p {
+	margin: auto;
+}
+
+footer a {
+	text-decoration: none;
+}
+
+footer a:hover {
+	color: #cc8870;
+}
+
+@media (max-width: 1280px) and (orientation:landscape),
+(max-width: 800px) and (orientation:portrait) {
 
 	body {
+		height: 100%;
+
+		grid-template-rows: 4.25rem auto auto 4.25rem;
 		grid-template-areas:
-		"header header header header"
-		"nav    main   main   main"
-		"nav    main   main   main"
-		"footer footer footer footer";
+			"header header header header"
+			"nav    main   main   main"
+			"nav    main   main   main"
+			"footer footer footer footer";
 	}
 
-	header, nav, main, footer {
-		background: green;
+	header {
+		width : 100%;
+		height: 4.25rem;
+
+		position: fixed;
+		top     : 0;
+
+		margin : 0;
+		z-index: 9999;
+
+		border    : none;
+		box-shadow: none;
+	}
+
+	nav {
+		position: relative;
+		top     : none;
+		margin  : 0;
+
+		background: #9e7465;
+
+		border-style : none;
+		border-radius: 0;
+	}
+
+	.botonera {
+		position: fixed;
+		top     : 4.5rem;
+		left    : 2.5%;
+		width   : 20%;
+		height  : 18rem;
+
+		grid-template-rows   : repeat(6, auto);
+		grid-template-columns: auto;
+		gap                  : 0.3rem;
+	}
+
+	.botonera a {
+		font-size: 1rem;
+	}
+
+	main {
+		margin    : 0;
+		background: rgb(127, 127, 255);
 	}
 }
 
-@media	(max-width: 960px) and (orientation:landscape),
-		(max-width: 640px) and (orientation:portrait) {
+@media (max-width: 960px) and (orientation:landscape),
+(max-width: 540px) and (orientation:portrait) {
 
-		body {
-			grid-template-areas  :
+	body {
+		grid-template-rows: 4.25rem auto auto 4.25rem;
+		grid-template-areas:
 			"header header header header"
 			"nav    nav    nav    nav"
 			"main   main   main   main"
 			"footer footer footer footer";
-	
-		}
+	}
 
-		header, nav, main, footer {
-			background: salmon;
-		}
+	h1 {
+		margin-left: 1.75rem;
+	}
+
+	nav {
+		position: fixed;
+		top     : 4.25rem;
+
+		height: 18.3rem;
+		width : 100%;
+
+		margin : 0;
+		z-index: 9999;
+	}
+
+	.botonera {
+		left : 5%;
+		width: 90%;
+	}
+
+	.icono {
+		width: 4.25rem;
+		height: 4.25rem;
+
+		/*cochinada para centrar texto*/
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		color: #7e5647;
+		font-size: 2rem;
+
+		text-decoration: none;
+	}
+
+	.visible-invisible {
+		display: none;
+	}
+
+	main {
+		background: rgb(90, 218, 90);
+	}
 }
