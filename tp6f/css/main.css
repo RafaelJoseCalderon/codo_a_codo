@@ -286,3 +286,13 @@ h2 {
 	width     : 16rem;
 	height    : 16rem;
 }
+
+.contenedor-imagenes a {
+	text-decoration: none;
+	color: #000;
+}
+
+.contenedor-imagenes h4 {
+	margin-top: -3rem;
+	text-align: center;
+}

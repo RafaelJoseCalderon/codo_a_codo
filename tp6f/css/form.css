@@ -19,11 +19,6 @@ fieldset {
 	grid-gap             : 2%;
 }
 
-label {
-	color      : #855d4f;
-	text-align : center;
-	grid-column: 1;
-}
 
 textarea {
 	margin       : 10px 0 25px 0;
@@ -31,6 +26,12 @@ textarea {
 	border       : none;
 	border-bottom: 1px solid;
 	grid-column  : 2 / span 2;
+}
+
+.label {
+	color      : #855d4f;
+	text-align : center;
+	grid-column: 1;
 }
 
 .subcripcion {
@@ -87,13 +88,17 @@ textarea {
 	color           : white;
 }
 
-@media (max-width:600px) {
-	.container {
+@media (max-width:800px) {
+	fieldset {
 		display: block;
 	}
 
-	.container label {
+	.label {
 		display: none;
+	}
+
+	.subcripcion {
+		margin-bottom: 0.75rem;
 	}
 
 	textarea,
