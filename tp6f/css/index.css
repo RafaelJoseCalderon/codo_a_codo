@@ -61,12 +61,12 @@ main {
 
 @media (max-width: 800px) and (orientation:portrait) {
 	.deslizador {
-		width : 25rem;
+		width : 20rem;
 		height: 9.375rem;
 	}
 
 	.deslizador img {
-		width : 25rem;
+		width : 20rem;
 		height: 9.375rem;
 	}
 }
