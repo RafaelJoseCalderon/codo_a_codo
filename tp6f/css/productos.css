@@ -1,0 +1,41 @@
+body {
+	height: 100%;
+}
+
+main {
+	display        : flex;
+	justify-content: center;
+	align-items    : center;
+}
+
+.producto {
+	display        : flex;
+	width          : 500px;
+	justify-content: center;
+	flex-direction : column;
+	align-items    : center;
+	font-family    : "Roboto", "Helvetica", sans-serif;
+	width          : 500px
+}
+
+.producto>img {
+	max-width: 200px;
+}
+
+.producto>.nombre {
+	font-size   : 2rem;
+	font-variant: small-caps;
+	text-align  : center;
+}
+
+.producto>.descripcion {
+	font-style: italic;
+	text-align: center;
+}
+
+.producto>.presentacion {
+	font-style  : italic;
+	font-variant: small-caps;
+	font-weight : bold;
+	color       : #653F31;
+}

@@ -10,9 +10,17 @@
 
 /* las fuentes no amplian exactamente de manera proporcional en firefox*/
 /*       -> precindiendo del margen y el padding el lo que rodea a textos,
-            se fuerza a mantener proporcionalidad, no en todo claro*/
+            se fuerza a mantener proporcionalidad, no en todo, claro*/
+
+/* Nota: "cochinada para centrar texto", en realidad, no es tan chanchada
+		 como pense, lo que pasa es que display no hereda. La cuestion es
+		 cuando me conviene que herede y cuando no.
+		 Como dibuje las cosas no me conviene que herede grid, por otra
+		 parte, no se si por suerte o por desgracia si me convino que
+		 herede flex*/
 
 html {
+	overflow-y: scroll;
 	height: 100%;
 }
 
@@ -109,11 +117,8 @@ nav {
 }
 
 main {
-	grid-area   : main;
-	margin      : 0 5%;
-	background  : rgb(255, 127, 127);
-	border-style: solid;
-	border-width: 1px;
+	grid-area: main;
+	margin   : 0 5%;
 }
 
 footer {
@@ -170,7 +175,7 @@ footer a:hover {
 
 	nav {
 		position: relative;
-		top     : none;
+		top     : auto;
 		margin  : 0;
 
 		background: #9e7465;
@@ -196,8 +201,7 @@ footer a:hover {
 	}
 
 	main {
-		margin    : 0;
-		background: rgb(127, 127, 255);
+		margin: 0;
 	}
 }
 
@@ -234,15 +238,15 @@ footer a:hover {
 	}
 
 	.icono {
-		width: 4.25rem;
+		width : 4.25rem;
 		height: 4.25rem;
 
 		/*cochinada para centrar texto*/
-		display: flex;
-		align-items: center;
+		display        : flex;
+		align-items    : center;
 		justify-content: center;
 
-		color: #7e5647;
+		color    : #7e5647;
 		font-size: 2rem;
 
 		text-decoration: none;
@@ -251,8 +255,34 @@ footer a:hover {
 	.visible-invisible {
 		display: none;
 	}
+}
 
-	main {
-		background: rgb(90, 218, 90);
-	}
+section {
+	margin-top: 1rem;
+}
+
+h2 {
+	color: white;
+	background: #9e7465;
+}
+
+.contenedor-imagenes {
+	display        : flex;
+	flex-wrap      : wrap;
+	justify-content: space-around
+}
+
+.contenedor-imagenes img {
+	border-style : solid;
+	border-radius: 0.3125rem;
+	border-color : #9e7465;
+	box-shadow   : 0 0 0.1875rem 0.125rem rgba(0, 0, 0, .3);
+
+	margin        : 0.625rem;
+	display       : flex;
+	flex-direction: column;
+
+	object-fit: cover;
+	width     : 16rem;
+	height    : 16rem;
 }

@@ -1,0 +1,35 @@
+main {
+	margin    : 0 5%;
+}
+
+main>div {
+	display        : flex;
+	flex-wrap      : wrap;
+	margin-bottom  : 25px;
+	justify-content: space-around
+}
+
+main>div>div{
+	border-style : solid;
+	width        : 250px;
+	height       : 250px;
+	border-radius: 5px;
+	border-color : grey;
+
+	margin        : 10px;
+	display       : flex;
+	flex-direction: column;
+}
+
+main>div>div>a {
+	background: rgb(218, 218, 218);
+	align-items: center;
+	padding: 15px;
+}
+
+iframe {
+	display  : flex;
+	transform: matrix(1, 0, 0, 1, 0, 0);
+	width    : 250px;
+	height   : 200px;
+}

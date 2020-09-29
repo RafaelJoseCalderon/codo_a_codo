@@ -1,0 +1,72 @@
+main {
+	padding: 1rem;
+}
+
+.deslizador {
+	margin    : 0 auto;
+	width     : 50rem;
+	height    : 18.75rem;
+	overflow-x: hidden;
+	display   : flex;
+}
+
+.deslizador img:first-child {
+	animation-name           : mov-deslizador;
+	animation-duration       : 30s;
+	animation-iteration-count: infinite;
+}
+
+.deslizador img {
+	width : 50rem;
+	height: 18.75rem;
+}
+
+@keyframes mov-deslizador {
+	0.0% {
+		margin-left: 0%
+	}
+
+	12.5% {
+		margin-left: -100%
+	}
+
+	25.0% {
+		margin-left: -200%
+	}
+
+	37.5% {
+		margin-left: -300%
+	}
+
+	50.0% {
+		margin-left: -400%
+	}
+
+	62.5% {
+		margin-left: -300%
+	}
+
+	75.0% {
+		margin-left: -200%
+	}
+
+	87.5% {
+		margin-left: -100%
+	}
+
+	100.0% {
+		margin-left: 0%
+	}
+}
+
+@media (max-width: 800px) and (orientation:portrait) {
+	.deslizador {
+		width : 25rem;
+		height: 9.375rem;
+	}
+
+	.deslizador img {
+		width : 25rem;
+		height: 9.375rem;
+	}
+}
