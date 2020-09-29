@@ -2,7 +2,7 @@ body {
 	height: 100%;
 }
 
-main form {
+form {
 	text-align   : center;
 	margin       : 0 10%;
 	padding      : 25px;
@@ -12,14 +12,15 @@ main form {
 	box-shadow   : 5px 5px 4px 4px rgb(95, 95, 95);
 }
 
-.container {
+fieldset {
+	margin-bottom        : 0.5rem;
 	display              : grid;
 	grid-template-columns: 9% 41.5% 41.5% 0;
 	grid-gap             : 2%;
 }
 
 label {
-	color      : #339fff;
+	color      : #855d4f;
 	text-align : center;
 	grid-column: 1;
 }
@@ -30,6 +31,20 @@ textarea {
 	border       : none;
 	border-bottom: 1px solid;
 	grid-column  : 2 / span 2;
+}
+
+.subcripcion {
+	display        : flex;
+	justify-content: flex-start;
+
+	height: 1rem;
+}
+
+.terminos {
+	display        : flex;
+	justify-content: flex-start;
+
+	height: 1rem;
 }
 
 .izq {
@@ -80,11 +95,14 @@ textarea {
 	.container label {
 		display: none;
 	}
-	
-	textarea, .izq, .der, .doble {
-		width: 100%;
-		margin: 2% 0;
-		grid-column  : none;
+
+	textarea,
+	.izq,
+	.der,
+	.doble {
+		width      : 100%;
+		margin     : 2% 0;
+		grid-column: none;
 	}
 
 	textarea {

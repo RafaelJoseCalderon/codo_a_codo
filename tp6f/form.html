@@ -28,18 +28,40 @@
 	</nav>
 	<main> <br />
 		<form action="show_data.html" target="_blank">
-			<div class="container">
+			<fieldset>
+				<legend>Nombre y apellido</legend>
 				<label class="fa fa-2x fa-user"></label>
 				<input class="izq" type="text" name="firstname" placeholder="Ingrese su nombre aqui...">
 				<input class="der" type="text" name="lastname" placeholder="Ingrese su apellido aqui...">
+			</fieldset>
+			<fieldset>
+				<legend>Correo</legend>
 				<label class="fa fa-2x fa-envelope"></label>
 				<input class="doble" type="email" name="email" placeholder="Ingrese su e-mail aqui...">
+			</fieldset>
+			<fieldset>
+				<legend>Contraseña y confirmación</legend>
 				<label class="fa fa-2x fa-key"></label>
 				<input class="izq" type="password" name="password" placeholder="Ingrese su contraseña aqui...">
 				<input class="der" type="password" name="password" placeholder="Repita su contraseña aqui...">
+			</fieldset>
+			<fieldset>
+				<legend>tipo de subcripción y aceptación de terminos</legend>
+				<label class="fa fa-2x fa-pencil-square"></label>
+				<div class="subcripcion">
+					<input type="radio" name="tip_sub" value="free" checked>free
+					<input type="radio" name="tip_sub" value="premiun">premiun
+					<input type="radio" name="tip_sub" value="gold">gold
+				</div>
+				<div class="terminos">
+					<input type="checkbox" name="vendio_su_alma" value="SI" required>aceptación de treminos
+				</div>
+			</fieldset>
+			<fieldset>
+				<legend>Observación y/ comentario</legend>
 				<label class="fa fa-2x fa-pencil-square"></label>
 				<textarea class="doble" name="comentarios" placeholder="Escribe aquí un reseña sobre ud."></textarea>
-			</div>
+			</fieldset>
 			<input class="boton" type="submit" value="Enviar">
 		</form>
 		<br />
