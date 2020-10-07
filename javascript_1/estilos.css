@@ -1,0 +1,10 @@
+.resultado, .ejercicio_10 {
+	background-color:lightblue;
+	margin: 15px 5%;
+	padding: 15px;
+	height: 30px;
+}
+
+.ejercicio_10 {
+	height: 200px;
+}
