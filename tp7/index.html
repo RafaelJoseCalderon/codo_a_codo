@@ -22,15 +22,26 @@
 			border-color: blueviolet;
 			padding: 10px;
 		}
+
+		@media (min-width: 992px) {
+			header {
+				margin: 0 5%;
+				color: #cc8870;
+				background: white;
+				box-shadow: 0 0 0.125rem 0.125rem rgba(101, 63, 50, 0.45);
+			}
+		}
 	</style>
 </head>
 
 <body class="d-flex flex-column h-100">
-	<header class="sqrt d-sm-none d-md-block">header</header>
+	<header class="d-none d-md-block border">
+		<h1>Chocolates</h1>
+	</header>
 
 	<div class="row w-100 m-0">
-		<nav class="sqrt sticky-top col-lg-12 col-md-4 col-sm-12 col-xs-12">nav</nav>
-		<main class="sqrt col-lg-12 col-md-8 col-sm-12 col-xs-12">main <br>
+		<nav class="sqrt sticky-top col-lg-12 col-md-4 col-sm-12">nav</nav>
+		<main class="sqrt col-lg-12 col-md-8 col-sm-12">main <br>
 			a <br>a <br>a <br>a <br>a <br>a <br>a <br>a <br>a <br>a <br>a <br>
 			a <br>a <br>a <br>a <br>a <br>a <br>a <br>a <br>a <br>a <br>a <br>
 			a <br>a <br>a <br>a <br>a <br>a <br>a <br>a <br>a <br>a <br>a <br>
