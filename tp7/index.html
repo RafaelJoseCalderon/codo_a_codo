@@ -5,48 +5,52 @@
 	<title>Chocolates</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-	<style>
-		html {
-			height: 100%;
-			/* 			display: flex;
-			flex-direction: column; */
-		}
 
-		.sqrt {
-			background-color: orange;
-			border-style: solid;
-			border-color: blueviolet;
-			padding: 10px;
-		}
-
-		@media (min-width: 992px) {
-			header {
-				margin: 0 5%;
-				color: #cc8870;
-				background: white;
-				box-shadow: 0 0 0.125rem 0.125rem rgba(101, 63, 50, 0.45);
-			}
-		}
-	</style>
+	<link rel="stylesheet" href="css/main.css">
 </head>
 
 <body class="d-flex flex-column h-100">
-	<header class="d-none d-md-block border">
-		<h1>Chocolates</h1>
+	<header class="d-none d-md-block py-lg-1 py-xl-1 px-lg-5 px-xl-5">
+		<h1 class="	font-italic font-weight-bold text-center align-middle py-2 padding bg-light m-0 border">
+			Chocolates
+		</h1>
 	</header>
 
-	<div class="row w-100 m-0">
-		<nav class="sqrt sticky-top col-lg-12 col-md-4 col-sm-12">nav</nav>
+	<div class="mb-auto row w-100 m-0 px-lg-5 px-xl-5">
+		<nav class="sticky-top col-lg-12 col-md-4 col-sm-12 py-0 px-sm-2 px-md-2 px-lg-0 px-xl-0
+					navbar navbar-expand-md bg-light align-items-md-start">
+
+			<!-- Titulo de la barra -->
+			<div class="font-italic font-weight-bold d-none d-sm-block d-md-none navbar-brand h1">
+				Chocolates
+			</div>
+
+			<!-- Boton hamburguesa -->
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+				<span class="fa fa-bars"></span>
+			</button>
+
+			<div class="m-0 p-0 w-100 collapse navbar-collapse" id="collapsibleNavbar">
+				<ul class="navbar-nav w-100 d-flex flex-md-column flex-lg-row mx-sm-n2 mx-md-n2 m-0 p-0 justify-content-between desplegable">
+					<li class="nav-item col-xl-2 col-lg-2 col-md-12 text-center p-0"><a class="nav-link m-1 p-0 text-white border btn" href="#">Inicio</a></li>
+					<li class="nav-item col-xl-2 col-lg-2 col-md-12 text-center p-0"><a class="nav-link m-1 p-0 text-white border btn" href="#">Acerca de</a></li>
+					<li class="nav-item col-xl-2 col-lg-2 col-md-12 text-center p-0"><a class="nav-link m-1 p-0 text-white border btn" href="#">Contacto</a></li>
+					<li class="nav-item col-xl-2 col-lg-2 col-md-12 text-center p-0"><a class="nav-link m-1 p-0 text-white border btn" href="#">Registrese</a></li>
+					<li class="nav-item col-xl-2 col-lg-2 col-md-12 text-center p-0"><a class="nav-link m-1 p-0 text-white border btn" href="#">Sucursales</a></li>
+					<li class="nav-item col-xl-2 col-lg-2 col-md-12 text-center p-0"><a class="nav-link m-1 p-0 text-white border btn" href="#">Clientes</a></li>
+				</ul>
+			</div>
+
+		</nav>
+
 		<main class="sqrt col-lg-12 col-md-8 col-sm-12">main <br>
-			a <br>a <br>a <br>a <br>a <br>a <br>a <br>a <br>a <br>a <br>a <br>
-			a <br>a <br>a <br>a <br>a <br>a <br>a <br>a <br>a <br>a <br>a <br>
-			a <br>a <br>a <br>a <br>a <br>a <br>a <br>a <br>a <br>a <br>a <br>
-			a <br>a <br>a <br>a <br>a <br>a <br>a <br>a <br>a <br>a <br>a <br>
-			a <br>a <br>a <br>a <br>a <br>a <br>a <br>a <br>a <br>a <br>a <br>
 			a <br>a <br>a <br>a <br>a <br>a <br>a <br>a <br>a <br>a <br>a <br>
 			a <br>a <br>a <br>a <br>a <br>a <br>a <br>a <br>a <br>a <br>a <br>
 			a <br>a <br>a <br>a <br>a <br>a <br>a <br>a <br>a <br>a <br>a <br>
@@ -54,7 +58,16 @@
 		</main>
 	</div>
 
-	<footer class="mt-auto py-3 sqrt">footer</footer>
+	<footer class="py-3 d-flex flex-column">
+		<p class="m-auto">
+			<a class="text-decoration-none fa fa-2x fa-inverse fa-twitter" href="https://twitter.com"></a>
+			<a class="text-decoration-none fa fa-2x fa-inverse fa-facebook" href="https://es-la.facebook.com"></a>
+			<a class="text-decoration-none fa fa-2x fa-inverse fa-pinterest" href="https://ar.pinterest.com"></a>
+			<a class="text-decoration-none fa fa-2x fa-inverse fa-instagram" href="https://www.instagram.com"></a>
+			<a class="text-decoration-none fa fa-2x fa-inverse fa-linkedin" href="https://www.linkedin.com"></a>
+		</p>
+		<p class="m-auto">Derechos reservados @2020</p>
+	</footer>
 </body>
 
 </html>

@@ -1,0 +1,76 @@
+html {
+	height: 100%;
+}
+
+.sqrt {
+	background-color: orange;
+	border-style: solid;
+	border-color: blueviolet;
+	padding: 10px;
+}
+
+* {
+	font-family: "DejaVu Serif";
+}
+
+h1,
+.h1,
+.fa-bars,
+.desplegable {
+	color: #9e7465 !important;
+}
+
+.desplegable {
+	background-color: #9e7465 !important;
+}
+
+h1,
+.h1 {
+	text-shadow: 0.2rem 0.2rem 0.2rem #000;
+}
+
+.h1 {
+	font-size: 1.75rem;
+}
+
+nav .btn {
+	background: #7e5647;
+	border-radius: 2rem;
+	border-color: white !important;
+}
+
+nav .btn:hover {
+	background: #cc8870;
+}
+
+@media (min-width: 992px) {
+	.py-2 {
+		padding: 2.6rem 0 !important
+	}
+
+	.border {
+		border-color: #9e7465 !important;
+	}
+
+	h1 {
+		box-shadow: 0 0 0.125rem 0.125rem rgba(101, 63, 50, 0.45);
+	}
+
+	nav {
+		border-radius: 2rem;
+	}
+}
+
+@media (min-width: 768px) {
+	nav.bg-light {
+		background-color: #9e7465 !important
+	}
+}
+
+footer {
+	background-color: #855d4f;
+}
+
+footer a:hover {
+	color: #cc8870;
+}
