@@ -42,7 +42,7 @@ footer a:hover {
 	color: #cc8870;
 }
 
-section img {
+img {
 	object-fit: cover;
 	width: 16rem;
 	height: 16rem;
