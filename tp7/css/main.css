@@ -2,13 +2,6 @@ html {
 	height: 100%;
 }
 
-.sqrt {
-	background-color: orange;
-	border-style: solid;
-	border-color: blueviolet;
-	padding: 10px;
-}
-
 * {
 	font-family: "DejaVu Serif";
 }
@@ -20,10 +13,6 @@ h1,
 
 .h1 {
 	font-size: 1.75rem;
-}
-
-h5 {
-	background: #9e7465;
 }
 
 nav .btn {
@@ -58,5 +47,3 @@ section img {
 	width: 16rem;
 	height: 16rem;
 }
-
-.mi-posicion-sticky {}
