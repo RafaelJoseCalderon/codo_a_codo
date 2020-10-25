@@ -1,0 +1,10 @@
+.card {
+	object-fit: cover;
+	width: 16rem;
+	height: 16rem;
+}
+
+iframe {
+	width: 15.875rem;
+	height: 12.9375rem;
+}

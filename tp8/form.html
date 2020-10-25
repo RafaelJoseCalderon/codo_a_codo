@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Chocolates</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" href="css/mis-colores.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/form.css">
+</head>
+
+<body id="idBody">
+	<header id="idHeader"></header>
+
+	<div id="idSubBody">
+		<nav id="idNav"></nav>
+
+		<main id="idMain"> <br>
+			<form class="m-0 mx-2 mx-sm-5 border rounded-lg d-flex flex-column align-content-center" action="show_data.html" target="_blank">
+				<fieldset class="m-1 p-1 border">
+					<legend class="w-auto h6">Nombre y apellido</legend>
+					<div class="d-flex flex-row w-100">
+						<label class="col-1 d-none d-lg-block text-center c-marron-3 fa fa-2x fa-user m-1"></label>
+						<div class="d-flex flex-wrap justify-content-around w-100">
+							<input class="border-top-0 border-right-0 border-left-0 border-dark m-1 flex-fill" type="text" name="firstname" placeholder="Ingrese su nombre aqui...">
+							<input class="border-top-0 border-right-0 border-left-0 border-dark m-1 flex-fill" type="text" name="lastname" placeholder="Ingrese su apellido aqui...">
+						</div>
+					</div>
+				</fieldset>
+				<fieldset class="m-1 p-1 border">
+					<legend class="w-auto h6">Correo</legend>
+					<div class="d-flex flex-row w-100">
+						<label class="col-1 d-none d-lg-block text-center c-marron-3 fa fa-2x fa-envelope m-1"></label>
+						<div class="d-flex flex-row w-100">
+							<input class="border-top-0 border-right-0 border-left-0 border-dark m-1 flex-fill" type="email" name="email" placeholder="Ingrese su e-mail aqui...">
+						</div>
+					</div>
+				</fieldset>
+				<fieldset class="m-1 p-1 border">
+					<legend class="w-auto h6">Contraseña y confirmación</legend>
+					<div class="d-flex flex-row w-100">
+						<label class="col-1 d-none d-lg-block text-center c-marron-3 fa fa-2x fa-key m-1"></label>
+						<div class="d-flex flex-wrap justify-content-around w-100">
+							<input class="border-top-0 border-right-0 border-left-0 border-dark m-1 flex-fill" type="password" name="password" placeholder="Ingrese su contraseña aqui...">
+							<input class="border-top-0 border-right-0 border-left-0 border-dark m-1 flex-fill" type="password" name="password" placeholder="Repita su contraseña aqui...">
+						</div>
+					</div>
+				</fieldset>
+				<fieldset class="m-1 p-1 border">
+					<legend class="w-auto h6">Subcripción y terminos</legend>
+					<div class="d-flex flex-row w-100">
+						<label class="col-1 d-none d-lg-block text-center c-marron-3 fa fa-2x fa-pencil-square m-1"></label>
+						<div class="d-flex flex-wrap justify-content-around w-100">
+							<div class="m-1 flex-fill">
+								<input class="m-0 mx-1" type="radio" name="tip_sub" value="free" checked>free
+								<input class="m-0 mx-1" type="radio" name="tip_sub" value="premiun">premiun
+								<input class="m-0 mx-1" type="radio" name="tip_sub" value="gold">gold
+							</div>
+							<div class="m-1 flex-fill">
+								<input class="m-0 mx-1" type="checkbox" name="vendio_su_alma" value="SI" required>aceptación de treminos
+							</div>
+						</div>
+					</div>
+				</fieldset>
+				<fieldset class="m-1 p-1 border">
+					<legend class="w-auto h6">Observación y/ comentario</legend>
+					<div class="d-flex flex-row w-100">
+						<label class="col-1 d-none d-lg-block text-center c-marron-3 fa fa-2x fa-pencil-square m-1"></label>
+						<div class="d-flex flex-row w-100">
+							<textarea class="border-top-0 border-right-0 border-left-0 border-dark m-1 flex-fill" type="email" name="comentarios" placeholder="Escribe aquí un reseña sobre ud."></textarea>
+						</div>
+					</div>
+				</fieldset>
+				<button type="submit" class="m-3 mx-auto btn btn-outline-success text-dark">Enviar</button>
+			</form>
+			<br />
+		</main>
+	</div>
+
+	<footer id="idFooter"></footer>
+	<script src="script/index.js" onload="navBar()"></script>
+</body>
+
+</html>

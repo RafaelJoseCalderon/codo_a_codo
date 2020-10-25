@@ -1,0 +1,9 @@
+form {
+	box-shadow: 2.5px 2.5px 2px 2px rgb(95, 95, 95);
+}
+
+input,
+textarea {
+	font-family: "Cantarell";
+	border-width: 1.5px;
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Chocolates</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" href="css/mis-colores.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+
+<body id="idBody">
+	<header id="idHeader"></header>
+
+	<div id="idSubBody">
+		<nav id="idNav"></nav>
+
+		<main id="idMain"> <br>
+			<div id="demo" class="carousel slide mx-auto" data-ride="carousel">
+
+				<!-- Indicators -->
+				<ul class="carousel-indicators">
+					<li data-target="#demo" data-slide-to="0" class="active"></li>
+					<li data-target="#demo" data-slide-to="1"></li>
+					<li data-target="#demo" data-slide-to="2"></li>
+					<li data-target="#demo" data-slide-to="4"></li>
+					<li data-target="#demo" data-slide-to="5"></li>
+				</ul>
+
+				<!-- The slideshow -->
+				<div class="carousel-inner">
+					<div class="carousel-item active"><img src="imagenes/keyframe/images_01.jpg"></div>
+					<div class="carousel-item"> <img src="imagenes/keyframe/images_02.jpg"></div>
+					<div class="carousel-item"> <img src="imagenes/keyframe/images_03.jpg"></div>
+					<div class="carousel-item"> <img src="imagenes/keyframe/images_04.jpg"></div>
+					<div class="carousel-item"> <img src="imagenes/keyframe/images_05.jpg"></div>
+				</div>
+
+				<!-- Left and right controls -->
+				<a class="carousel-control-prev" href="#demo" data-slide="prev">
+					<span class="carousel-control-prev-icon"></span>
+				</a>
+				<a class="carousel-control-next" href="#demo" data-slide="next">
+					<span class="carousel-control-next-icon"></span>
+				</a>
+			</div>
+
+			<section class="my-4">
+				<h5 class="p-1 text-white bc-marron-2">seccion 1</h5>
+				<div class="d-flex flex-wrap justify-content-around">
+					<a class="m-2 text-decoration-none text-black-50" href="productos/caprichos.html">
+						<img class="rounded border shadow-lg bg-white" src="imagenes/productos/caprichos.jpg" alt="imagen no disponible">
+						<h4 class="mt-n5 text-center">caprichos</h4>
+					</a>
+					<a class="m-2 text-decoration-none text-black-50" href="productos/lujuria-tropical.html">
+						<img class="rounded border shadow-lg bg-white" src="imagenes/productos/lujuria-tropical.jpg" alt="imagen no disponible">
+						<h4 class="mt-n5 text-center">lujuria-tropical</h4>
+					</a>
+					<a class="m-2 text-decoration-none text-black-50" href="productos/patagonia.html">
+						<img class="rounded border shadow-lg bg-white" src="imagenes/productos/patagonia.jpg" alt="imagen no disponible">
+						<h4 class="mt-n5 text-center">patagonia</h4>
+					</a>
+				</div>
+			</section>
+
+			<section class="my-4">
+				<h5 class="p-1 text-white bc-marron-2">seccion 2</h5>
+				<div class="d-flex flex-wrap justify-content-around">
+					<a class="m-2 text-decoration-none text-black-50" href="productos/trinidad-almendras.html">
+						<img class="rounded border shadow-lg bg-white" src="imagenes/productos/trinidad-almendra.jpg" alt="imagen no disponible">
+						<h4 class="mt-n5 text-center">trinidad-almendra</h4>
+					</a>
+					<a class="m-2 text-decoration-none text-black-50" href="productos/trufas-golosas.html">
+						<img class="rounded border shadow-lg bg-white" src="imagenes/productos/trufas-golosa.jpg" alt="imagen no disponible">
+						<h4 class="mt-n5 text-center">trufas-golosa</h4>
+					</a>
+					<a class="m-2 text-decoration-none text-black-50" href="productos/volcan-chocolate.html">
+						<img class="rounded border shadow-lg bg-white" src="imagenes/productos/volcan-de-chocolate.jpeg" alt="imagen no disponible">
+						<h4 class="mt-n5 text-center">volcan-chocolate</h4>
+					</a>
+				</div>
+			</section>
+		</main>
+
+		<div id="prueba"></div>
+
+	</div>
+
+	<footer id="idFooter"></footer>
+	<script src="script/index.js" onload="navBar()"></script>
+</body>
+
+</html>
