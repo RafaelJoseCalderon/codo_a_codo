@@ -1,11 +1,12 @@
 /**############################################################################################################## */
-document.getElementById("idHeader").outerHTML = `
+const header = `
 	<header class="d-none d-md-block py-lg-1 py-xl-1 px-lg-5 px-xl-5">
 		<h1 class="c-marron-2 font-italic font-weight-bold text-center align-middle py-2 padding bg-light m-0 border">
 			Chocolates
 		</h1>
 	</header>
 `;
+document.getElementById("idHeader").outerHTML = header;
 
 /**############################################################################################################## */
 const botonNavBar = (obj) => {
@@ -54,7 +55,7 @@ const navBar = (prefijo = "") => {
 }
 
 /**############################################################################################################## */
-document.getElementById("idFooter").outerHTML = `
+const footer = `
 	<footer class="py-3 d-flex flex-column bc-marron-3">
 		<p class="m-auto">
 			<a class="text-decoration-none fa fa-2x fa-inverse fa-twitter" href="https://twitter.com"></a>
@@ -66,6 +67,7 @@ document.getElementById("idFooter").outerHTML = `
 		<p class="m-auto">Derechos reservados @2020</p>
 	</footer>
 `;
+document.getElementById("idFooter").outerHTML = footer;
 
 /**############################################################################################################## */
 document.getElementById("idBody").className = `

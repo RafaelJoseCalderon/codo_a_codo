@@ -1,0 +1,23 @@
+.carousel,
+.carousel-item img {
+	width: 16rem;
+	height: 7.5rem;
+}
+
+@media (min-width: 576px) {
+
+	.carousel,
+	.carousel-item img {
+		width: 25rem;
+		height: 12.5rem;
+	}
+}
+
+@media (min-width: 992px) {
+
+	.carousel,
+	.carousel-item img {
+		width: 50rem;
+		height: 18.75rem;
+	}
+}
