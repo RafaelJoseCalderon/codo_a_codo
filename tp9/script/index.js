@@ -42,24 +42,35 @@ const cuerpoNavBar = (arrayDeBotones) => {
 	`
 };
 
-const referencias = (prefijo = "") => {
-	return [
-		{referencia: prefijo + "index.html",    etiqueta: "Inicio"},
-		{referencia: prefijo + "about.html",    etiqueta: "Acerca de"},
-		{referencia: prefijo + "contact.html",  etiqueta: "Contacto"},
-		{referencia: prefijo + "form.html",     etiqueta: "Registrese"},
-		{referencia: prefijo + "location.html", etiqueta: "Sucursales"},
-		{referencia: prefijo + "client.html",   etiqueta: "Clientes"}
+const referencias = () => {
+	return [{
+			referencia: "index.html",
+			etiqueta: "Inicio"
+		},
+		{
+			referencia: "about.html",
+			etiqueta: "Acerca de"
+		},
+		{
+			referencia: "contact.html",
+			etiqueta: "Contacto"
+		},
+		{
+			referencia: "form.html",
+			etiqueta: "Registrese"
+		},
+		{
+			referencia: "location.html",
+			etiqueta: "Sucursales"
+		},
+		{
+			referencia: "client.html",
+			etiqueta: "Clientes"
+		}
 	];
 }
 
-if (document.getElementById("idNav")) {
-	document.getElementById("idNav").outerHTML = cuerpoNavBar(referencias().map(botonNavBar).join(""));
-}
-
-if (document.getElementById("idNavProd")) {
-	document.getElementById("idNavProd").outerHTML = cuerpoNavBar(referencias("../").map(botonNavBar).join(""));
-}
+document.getElementById("idNav").outerHTML = cuerpoNavBar(referencias().map(botonNavBar).join(""));
 
 /**############################################################################################################## */
 const footer = `
@@ -82,7 +93,7 @@ const carousel = (lista) => {
 	let numeracionCarousel = `<li data-target="#carousel" data-slide-to="0" class="active"></li>`;
 	let listaImagenesCarousel = `<div class="carousel-item active"><img src="${lista[0]}"></div>`
 
-	for(let i = 1; i < lista.length; i++) {
+	for (let i = 1; i < lista.length; i++) {
 		numeracionCarousel += `<li data-target="#carousel" data-slide-to="1"></li>`;
 		listaImagenesCarousel += `<div class="carousel-item"> <img src="${lista[i]}"></div>`
 	}
@@ -109,7 +120,9 @@ if (document.getElementById("carousel")) {
 /** seccion para el index */
 const recuadro = (obj) => {
 	return `
-		<a class="m-2 text-decoration-none text-black-50" href="${obj.href}">
+		<a	class="m-2 text-decoration-none text-black-50"
+			onclick="localStorage.setItem('id_producto', '${obj.id}')" href="producto.html"
+		>
 			<img class="rounded border shadow-lg bg-white" src="${obj.src}" alt="imagen no disponible">
 			<h4 class="mt-n5 text-center">"${obj.h4}"</h4>
 		</a>
@@ -133,7 +146,26 @@ if (document.getElementById("seccion1") && document.getElementById("seccion2")) 
 }
 
 /**############################################################################################################## */
-/** cajas para el sucursales */ /** La verdad no se si amerita, qué tan rapido cambian los clientes? */
+/** productos */
+const item = (producto) => {
+	return `
+		<main class="col-lg-12 col-md-8 col-sm-12 p-2 d-flex flex-column align-items-center justify-items-center"> <br>
+			<h4 class="c-marron-2 font-italic font-weight-bold">${producto.titulo}</h4>
+			<img class="m-2 rounded border shadow-lg bg-white" src="${producto.imagen}">
+			<p class="font-italic">${producto.descripcion}</p>
+			<p class="font-italic font-weight-bold c-marron-3">${producto.precio}</p>
+		</main>
+	`;
+}
+
+if (document.getElementById("producto")) {
+	let producto = productos[localStorage.getItem('id_producto')];
+	document.getElementById("producto").outerHTML = item(producto);
+}
+
+/**############################################################################################################## */
+/** cajas para el sucursales */
+/** La verdad no se si amerita, qué tan rapido cambian los clientes? */
 const recuadroMap = (obj) => {
 	return `
 		<div class="card m-2">
@@ -154,7 +186,8 @@ if (document.getElementById("sucursales")) {
 }
 
 /**############################################################################################################## */
-/** cajas para el clientes */ /** La verdad no se si amerita, qué tan rapido cambian los clientes? */
+/** cajas para el clientes */
+/** La verdad no se si amerita, qué tan rapido cambian los clientes? */
 if (document.getElementById("clientes")) {
 	document.getElementById("clientes").outerHTML = `
 		<div class="d-flex flex-wrap justify-content-around">
@@ -162,10 +195,6 @@ if (document.getElementById("clientes")) {
 		</div>
 	`;
 }
-
-/**############################################################################################################## */
-/** productos */
-var prueba;
 
 /**############################################################################################################## */
 document.getElementById("idBody").className = `
@@ -184,11 +213,13 @@ document.getElementById("idSubBody").className = `
 	w-100 m-0 px-lg-5 px-xl-5
 `;
 
-document.getElementById("idMain").className += `
-	col-lg-12
-	col-md-8
-	col-sm-12
-`;
+if (document.getElementById("idMain")) {
+	document.getElementById("idMain").className += `
+		col-lg-12
+		col-md-8
+		col-sm-12
+	`;
+}
 
 if (document.getElementById("tituloSubCuerpo")) {
 	document.getElementById("tituloSubCuerpo").className = `
