@@ -94,7 +94,7 @@ const carousel = (lista) => {
 	let listaImagenesCarousel = `<div class="carousel-item active"><img src="${lista[0]}"></div>`
 
 	for (let i = 1; i < lista.length; i++) {
-		numeracionCarousel += `<li data-target="#carousel" data-slide-to="1"></li>`;
+		numeracionCarousel += `<li data-target="#carousel" data-slide-to="${i}"></li>`;
 		listaImagenesCarousel += `<div class="carousel-item"> <img src="${lista[i]}"></div>`
 	}
 
@@ -119,9 +119,10 @@ if (document.getElementById("carousel")) {
 /**############################################################################################################## */
 /** seccion para el index */
 const recuadro = (obj) => {
+	let href = !obj.href ? "producto.html" : ""; // chanchada, corregir luego
 	return `
 		<a	class="m-2 text-decoration-none text-black-50"
-			onclick="localStorage.setItem('id_producto', '${obj.id}')" href="producto.html"
+			onclick="localStorage.setItem('id_producto', '${obj.id}')" href="${href}"
 		>
 			<img class="rounded border shadow-lg bg-white" src="${obj.src}" alt="imagen no disponible">
 			<h4 class="mt-n5 text-center">"${obj.h4}"</h4>

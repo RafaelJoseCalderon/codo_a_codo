@@ -1,0 +1,374 @@
+.c-marron-1 {
+	color: #cc8870 !important;
+}
+
+.c-marron-2 {
+	color: #9e7465 !important;
+}
+
+.c-marron-3 {
+	color: #855d4f !important;
+}
+
+.c-marron-4 {
+	color: #7e5647 !important;
+}
+
+.c-transparente {
+	color: transparent !important;
+}
+
+.bc-marron-1 {
+	background-color: #cc8870 !important;
+}
+
+.bc-marron-2 {
+	background-color: #9e7465 !important;
+}
+
+.bc-marron-3 {
+	background-color: #855d4f !important;
+}
+
+.bc-marron-4 {
+	background-color: #7e5647 !important;
+}
+
+.bc-transparente {
+	background-color: transparent !important;
+}
+
+.hbc-marron-1:hover {
+	background-color: #cc8870 !important;
+}
+
+.hbc-marron-2:hover {
+	background-color: #9e7465 !important;
+}
+
+.hbc-marron-3:hover {
+	background-color: #855d4f !important;
+}
+
+.hbc-marron-4:hover {
+	background-color: #7e5647 !important;
+}
+
+@media (min-width:576px) {
+	.c-marron-sm-1 {
+		color: #cc8870 !important;
+	}
+
+	.c-marron-sm-2 {
+		color: #9e7465 !important;
+	}
+
+	.c-marron-sm-3 {
+		color: #855d4f !important;
+	}
+
+	.c-marron-sm-4 {
+		color: #7e5647 !important;
+	}
+
+	.c-transparente-sm {
+		color: transparent !important;
+	}
+
+	.bc-marron-sm-1 {
+		background-color: #cc8870 !important;
+	}
+
+	.bc-marron-sm-2 {
+		background-color: #9e7465 !important;
+	}
+
+	.bc-marron-sm-3 {
+		background-color: #855d4f !important;
+	}
+
+	.bc-marron-sm-4 {
+		background-color: #7e5647 !important;
+	}
+
+	.bc-transparente-sm {
+		background-color: transparent !important;
+	}
+
+	.hbc-marron-sm-1:hover {
+		background-color: #cc8870 !important;
+	}
+
+	.hbc-marron-sm-2:hover {
+		background-color: #9e7465 !important;
+	}
+
+	.hbc-marron-sm-3:hover {
+		background-color: #855d4f !important;
+	}
+
+	.hbc-marron-sm-4:hover {
+		background-color: #7e5647 !important;
+	}
+}
+
+@media (min-width:768px) {
+
+	.c-marron-sm-1,
+	.c-marron-md-1 {
+		color: #cc8870 !important;
+	}
+
+	.c-marron-sm-2,
+	.c-marron-md-2 {
+		color: #9e7465 !important;
+	}
+
+	.c-marron-sm-3,
+	.c-marron-md-3 {
+		color: #855d4f !important;
+	}
+
+	.c-marron-sm-4,
+	.c-marron-md-4 {
+		color: #7e5647 !important;
+	}
+
+	.c-transparente-sm,
+	.c-blamco-md {
+		color: transparent !important;
+	}
+
+	.bc-marron-sm-1,
+	.bc-marron-md-1 {
+		background-color: #cc8870 !important;
+	}
+
+	.bc-marron-sm-2,
+	.bc-marron-md-2 {
+		background-color: #9e7465 !important;
+	}
+
+	.bc-marron-sm-3,
+	.bc-marron-md-3 {
+		background-color: #855d4f !important;
+	}
+
+	.bc-marron-sm-4,
+	.bc-marron-md-4 {
+		background-color: #7e5647 !important;
+	}
+
+	.bc-transparente-sm,
+	.bc-transparente-md {
+		background-color: transparent !important;
+	}
+
+	.hbc-marron-sm-1:hover,
+	.hbc-marron-md-1:hover {
+		background-color: #cc8870 !important;
+	}
+
+	.hbc-marron-sm-2:hover,
+	.hbc-marron-md-2:hover {
+		background-color: #9e7465 !important;
+	}
+
+	.hbc-marron-sm-3:hover,
+	.hbc-marron-md-3:hover {
+		background-color: #855d4f !important;
+	}
+
+	.hbc-marron-sm-4:hover,
+	.hbc-marron-md-4:hover {
+		background-color: #7e5647 !important;
+	}
+}
+
+@media (min-width:992px) {
+
+	.c-marron-sm-1,
+	.c-marron-md-1,
+	.c-marron-lg-1 {
+		color: #cc8870 !important;
+	}
+
+	.c-marron-sm-2,
+	.c-marron-md-2,
+	.c-marron-lg-2 {
+		color: #9e7465 !important;
+	}
+
+	.c-marron-sm-3,
+	.c-marron-md-3,
+	.c-marron-lg-3 {
+		color: #855d4f !important;
+	}
+
+	.c-marron-sm-4,
+	.c-marron-md-4,
+	.c-marron-lg-4 {
+		color: #7e5647 !important;
+	}
+
+	.c-transparente-sm,
+	.c-transparente-md,
+	.c-transparente-lg {
+		color: transparent !important;
+	}
+
+	.bc-marron-sm-1,
+	.bc-marron-md-1,
+	.bc-marron-lg-1 {
+		background-color: #cc8870 !important;
+	}
+
+	.bc-marron-sm-2,
+	.bc-marron-md-2,
+	.bc-marron-lg-2 {
+		background-color: #9e7465 !important;
+	}
+
+	.bc-marron-sm-3,
+	.bc-marron-md-3,
+	.bc-marron-lg-3 {
+		background-color: #855d4f !important;
+	}
+
+	.bc-marron-sm-4,
+	.bc-marron-md-4,
+	.bc-marron-lg-4 {
+		background-color: #7e5647 !important;
+	}
+
+	.bc-transparente-sm,
+	.bc-transparente-md,
+	.bc-transparente-lg {
+		background-color: transparent !important;
+	}
+
+	.hbc-marron-sm-1:hover,
+	.hbc-marron-md-1:hover,
+	.hbc-marron-lg-1:hover {
+		background-color: #cc8870 !important;
+	}
+
+	.hbc-marron-sm-2:hover,
+	.hbc-marron-md-2:hover,
+	.hbc-marron-lg-2:hover {
+		background-color: #9e7465 !important;
+	}
+
+	.hbc-marron-sm-3:hover,
+	.hbc-marron-md-3:hover,
+	.hbc-marron-lg-3:hover {
+		background-color: #855d4f !important;
+	}
+
+	.hbc-marron-sm-4:hover,
+	.hbc-marron-md-4:hover,
+	.hbc-marron-lg-4:hover {
+		background-color: #7e5647 !important;
+	}
+}
+
+@media (min-width:1200px) {
+
+	.c-marron-sm-1,
+	.c-marron-md-1,
+	.c-marron-lg-1,
+	.c-marron-xl-1 {
+		color: #cc8870 !important;
+	}
+
+	.c-marron-sm-2,
+	.c-marron-md-2,
+	.c-marron-lg-2,
+	.c-marron-xl-2 {
+		color: #9e7465 !important;
+	}
+
+	.c-marron-sm-3,
+	.c-marron-md-3,
+	.c-marron-lg-3,
+	.c-marron-xl-3 {
+		color: #855d4f !important;
+	}
+
+	.c-marron-sm-4,
+	.c-marron-md-4,
+	.c-marron-lg-4,
+	.c-marron-xl-4 {
+		color: #7e5647 !important;
+	}
+
+	.c-transparente-sm,
+	.c-transparente-md,
+	.c-transparente-lg,
+	.c-transparente-xl {
+		color: transparent !important;
+	}
+
+	.bc-marron-sm-1,
+	.bc-marron-md-1,
+	.bc-marron-lg-1,
+	.bc-marron-xl-1 {
+		background-color: #cc8870 !important;
+	}
+
+	.bc-marron-sm-2,
+	.bc-marron-md-2,
+	.bc-marron-lg-2,
+	.bc-marron-xl-2 {
+		background-color: #9e7465 !important;
+	}
+
+	.bc-marron-sm-3,
+	.bc-marron-md-3,
+	.bc-marron-lg-3,
+	.bc-marron-xl-3 {
+		background-color: #855d4f !important;
+	}
+
+	.bc-marron-sm-4,
+	.bc-marron-md-4,
+	.bc-marron-lg-4,
+	.bc-marron-xl-4 {
+		background-color: #7e5647 !important;
+	}
+
+	.bc-transparente-sm,
+	.bc-transparente-md,
+	.bc-transparente-lg,
+	.bc-transparente-xl {
+		background-color: transparent !important;
+	}
+
+	.hbc-marron-sm-1:hover,
+	.hbc-marron-md-1:hover,
+	.hbc-marron-lg-1:hover,
+	.hbc-marron-xl-1:hover {
+		background-color: #cc8870 !important;
+	}
+
+	.hbc-marron-sm-2:hover,
+	.hbc-marron-md-2:hover,
+	.hbc-marron-lg-2:hover,
+	.hbc-marron-xl-2:hover {
+		background-color: #9e7465 !important;
+	}
+
+	.hbc-marron-sm-3:hover,
+	.hbc-marron-md-3:hover,
+	.hbc-marron-lg-3:hover,
+	.hbc-marron-xl-3:hover {
+		background-color: #855d4f !important;
+	}
+
+	.hbc-marron-sm-4:hover,
+	.hbc-marron-md-4:hover,
+	.hbc-marron-lg-4:hover,
+	.hbc-marron-xl-4:hover {
+		background-color: #7e5647 !important;
+	}
+}
