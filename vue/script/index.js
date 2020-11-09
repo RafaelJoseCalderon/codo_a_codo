@@ -44,7 +44,7 @@ Vue.component('button-nav-vue', {
 	template: `
 		<li class="nav-item col-xl-2 col-lg-2 col-md-12 text-center p-0">
 		<a class="nav-link m-1 p-0 text-white border btn bc-marron-4 hbc-marron-1"
-			@click="app.view = referencia; console.log(app.view)">{{etiqueta}}</a>
+			@click="app.view=referencia; console.log(app.view);">{{etiqueta}}</a>
 		</li>
 	`
 });
@@ -70,13 +70,14 @@ Vue.component('footer-vue', {
 Vue.component('recuadro', {
 	props: ['imagen'],
 	template: `
-		<a class="m-2 text-decoration-none text-black-50">
+		<a	class="m-2 text-decoration-none text-black-50"
+			@click="app.id_producto=imagen.id; console.log(app.id_producto); app.view=imagen.href; console.log(app.view);"
+		>
 			<img class="rounded border shadow-lg bg-white" :src="imagen.src" alt="imagen no disponible">
 			<h4 class="position-relative mt-n5 mb-5 text-center">{{imagen.h4}}</h4>
 		</a>
 	`
 });
-
 
 Vue.component('h4-vue', {
 	props: ['titulo'],
@@ -84,7 +85,6 @@ Vue.component('h4-vue', {
 		<h4 class="c-marron-2 font-italic font-weight-bold">{{titulo}}</h4>
 	`
 });
-
 
 /**############################################################################################################## */
 // index
@@ -159,28 +159,11 @@ Vue.component('recuadroMap', {
 });
 
 /**############################################################################################################## */
-Vue.component('client', {
-	template: `
-	<div>
-		client
-	</div>
-	`
-});
-
-/**############################################################################################################## */
-Vue.component('producto', {
-	template: `
-	<div>
-	producto
-	</div>
-	`
-});
-
-/**############################################################################################################## */
 var app = new Vue({
 	el: "#app",
 	data: {
 		view: "home",
+		id_producto: 0,
 		botones: [{
 				referencia: "home",
 				etiqueta: "Inicio"
@@ -209,49 +192,6 @@ var app = new Vue({
 	},
 	components: {
 		home: {
-			data() {
-				return {
-					carrusel: [
-						"imagenes/keyframe/images_01.jpg",
-						"imagenes/keyframe/images_02.jpg",
-						"imagenes/keyframe/images_03.jpg",
-						"imagenes/keyframe/images_04.jpg",
-						"imagenes/keyframe/images_05.jpg"
-					],
-					indexSeccion1: [{
-							id: 0,
-							src: "imagenes/productos/caprichos.jpg",
-							h4: "caprichos"
-						},
-						{
-							id: 1,
-							src: "imagenes/productos/lujuria-tropical.jpg",
-							h4: "lujuria-tropical"
-						},
-						{
-							id: 2,
-							src: "imagenes/productos/patagonia.jpg",
-							h4: "patagonia"
-						}
-					],
-					indexSeccion2: [{
-							id: 3,
-							src: "imagenes/productos/trinidad-almendra.jpg",
-							h4: "trinidad-almendras"
-						},
-						{
-							id: 4,
-							src: "imagenes/productos/trufas-golosa.jpg",
-							h4: "trufas-golosas"
-						},
-						{
-							id: 5,
-							src: "imagenes/productos/volcan-de-chocolate.jpeg",
-							h4: "volcan-chocolate"
-						}
-					]
-				}
-			},
 			template: `
 				<div> <br>
 					<carousel :imagenes="carrusel"></carousel> <br>
@@ -297,27 +237,6 @@ var app = new Vue({
 			`
 		},
 		location: {
-			data() {
-				return {
-					listaDeSucursales: [{
-							titulo: "Jorge Luis Hirschi",
-							referencia: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3271.7851338604373!2d-57.941160585278055!3d-34.91184128038078!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2e61621b73869%3A0x32c529fe42daaa5d!2sEstadio%20Jorge%20Luis%20Hirschi!5e0!3m2!1ses-419!2sar!4v1600817929348!5m2!1ses-419!2sar"
-						},
-						{
-							titulo: "Marcelo Bielsa",
-							referencia: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3347.810944161456!2d-60.663745985341365!3d-32.956000480918384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b7ab6f11537faf%3A0xa99bea6006b75b6a!2sEstadio%20Coloso%20Del%20Parque%20Marcelo%20Bielsa!5e0!3m2!1ses-419!2sar!4v1600817983797!5m2!1ses-419!2sar"
-						},
-						{
-							titulo: "Monumental José Fierro",
-							referencia: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.8532455828017!2d-65.20127438551866!3d-26.812801083170754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225c2456e5dad1%3A0xfb536657696dc88d!2sEstadio%20Monumental%20Jos%C3%A9%20Fierro!5e0!3m2!1ses-419!2sar!4v1600818035706!5m2!1ses-419!2sar"
-						},
-						{
-							titulo: "Juan Carmelo Zerillo",
-							referencia: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3271.8173909139928!2d-57.934655285278104!3d-34.911031880381024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2e61126c74ea3%3A0x7178349c562567f0!2sEstadio%20Juan%20Carmelo%20Zerillo!5e0!3m2!1ses-419!2sar!4v1600818072893!5m2!1ses-419!2sar"
-						}
-					]
-				}
-			},
 			template: `
 				<div>
 					<h4-vue titulo="Nuestras Sucursales"></h4-vue>
@@ -328,49 +247,27 @@ var app = new Vue({
 			`
 		},
 		client: {
-			data() {
-				return {
-					listaDeClientes: [{
-							src: "imagenes/clientes/images_01.jpeg",
-							h4: " "
-						},
-						{
-							src: "imagenes/clientes/images_02.jpeg",
-							h4: ""
-						},
-						{
-							src: "imagenes/clientes/images_03.jpeg",
-							h4: ""
-						},
-						{
-							src: "imagenes/clientes/images_04.jpeg",
-							h4: ""
-						},
-						{
-							src: "imagenes/clientes/images_05.jpeg",
-							h4: ""
-						},
-						{
-							src: "imagenes/clientes/images_06.jpeg",
-							h4: ""
-						},
-						{
-							src: "imagenes/clientes/images_07.jpeg",
-							h4: ""
-						},
-						{
-							src: "imagenes/clientes/images_08.jpeg",
-							h4: ""
-						}
-					]
-				}
-			},
 			template: `
 				<div>
 					<h4-vue titulo="Clientes varios"></h4-vue>
 					<div class="d-flex flex-wrap justify-content-around">
 						<recuadro v-for="item in listaDeClientes" :imagen="item"></recuadro>
 					</div>
+				</div>
+			`
+		},
+		producto: {
+			data() {
+				return {
+					producto: productos[app.id_producto]
+				}
+			},
+			template: `
+				<div class="p-2 d-flex flex-column align-items-center justify-items-center"> <br>
+					<h4 class="c-marron-2 font-italic font-weight-bold">{{producto.titulo}}</h4>
+					<img class="m-2 rounded border shadow-lg bg-white" :src="producto.imagen">
+					<p class="font-italic">{{producto.descripcion}}</p>
+					<p class="font-italic font-weight-bold c-marron-3">{{producto.precio}}</p>
 				</div>
 			`
 		}
