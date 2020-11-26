@@ -1,0 +1,20 @@
+[
+    {
+        "id": 0,
+        "href": "producto",
+        "src": "imagenes/productos/caprichos.jpg",
+        "h4": "caprichos"
+    },
+    {
+        "id": 1,
+        "href": "producto",
+        "src": "imagenes/productos/lujuria-tropical.jpg",
+        "h4": "lujuria-tropical"
+    },
+    {
+        "id": 2,
+        "href": "producto",
+        "src": "imagenes/productos/patagonia.jpg",
+        "h4": "patagonia"
+    }
+]
