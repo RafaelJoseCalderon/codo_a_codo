@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 
-# el masacote este esta sin probrar, individualmente andan, aunque no garantizo nada.
-
 def ejercicio_1():
     print("Hola mundo")
 
@@ -26,16 +24,16 @@ def ejercicio_5():
     else:
         resultado = numero_2
 
-    print("El mayor es %d" % resultado)
+    print("El mayor es: %d" % resultado)
 
 def ejercicio_6():
-maximo = int(input("Escriba un entero: "))
+    maximo = int(input("Escriba un entero: "))
 
-for n in range(2):
-    numero = int(input("Escriba un entero: "))
+    for n in range(2):
+        numero = int(input("Escriba un entero: "))
 
-    if numero > maximo:
-        maximo = numero
+        if numero > maximo:
+            maximo = numero
 
     print("El maximo es: %d" % maximo)
 
@@ -103,7 +101,7 @@ def ejercicio_13():
     if not resultado:
         print("No es divisible por: 2, 3, 5 o 7")
     else:
-        print("Es divisible por: " + resultado)
+        print("Es divisible por:" + resultado)
 
 def ejercicio_14():
     numero = int(input("Ingrese un entero "))
