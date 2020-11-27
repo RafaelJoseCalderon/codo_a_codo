@@ -107,11 +107,11 @@ def ejercicio_14():
     numero = int(input("Ingrese un entero "))
 
     respuesta = ""
-    for i in range(1, int(numero / 2)):
+    for i in range(1, int(numero / 2) + 1):
         if numero % i == 0:
             respuesta += " " + str(i)
 
-    print("\nLos divisores de %s  son: %s" % (numero, respuesta))
+    print("\nLos divisores de %s son: %s" % (numero, respuesta))
     print("Nota: los divisores no son necesariamnete primos")
 
 def ejercicio_15():
@@ -215,16 +215,16 @@ def ejercicio_22():
         lectura = input("Ingrese su DNI ")
 
 def ejercicio_23():
-    piramide.piramide(1, 31, 1)
+    piramide(1, 31, 1)
 
 def ejercicio_24():
-    piramide.piramide(6, 1, -1)
+    piramide(6, 0, -1)
 
 def ejercicio_25():
     lectura = int(input("Ingrese un entero no mayor a 50 "))
 
     if lectura <= 50:
-        piramide.piramide(1, lectura + 1, 1)
+        piramide(1, lectura + 1, 1)
 
 def ejercicio_26():
     salida = ""
