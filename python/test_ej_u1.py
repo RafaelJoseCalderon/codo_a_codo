@@ -7,6 +7,7 @@ from io import StringIO
 from unittest.mock import patch
 
 class TestEJU1(unittest.TestCase):
+
     @patch("sys.stdout", new_callable=StringIO)
     def test_ejercicio_1(self, mock_stdout):
         ej_u1.ejercicio_1()
