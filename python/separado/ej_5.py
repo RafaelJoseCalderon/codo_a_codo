@@ -8,4 +8,4 @@ if numero_1 > numero_2:
 else:
     resultado = numero_2
 
-print("El mayor es %d" % resultado)
+print("El mayor es: %d" % resultado)

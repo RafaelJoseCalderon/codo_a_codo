@@ -84,11 +84,11 @@ class TestEJU1(unittest.TestCase):
         ej_u1.ejercicio_11()
         self.assertEqual(
             mock_stdout.getvalue(),
-            "Las vocales presentes en la frace son: \n"+
-            "\tLa a aparece 2 veces\n"+
-            "\tLa e aparece 4 veces\n"+
-            "\tLa i aparece 2 veces\n"+
-            "\tLa o aparece 2 veces\n"+
+            "Las vocales presentes en la frace son: \n" +
+            "\tLa a aparece 2 veces\n" +
+            "\tLa e aparece 4 veces\n" +
+            "\tLa i aparece 2 veces\n" +
+            "\tLa o aparece 2 veces\n" +
             "\tLa u aparece 0 veces\n"
         )
 
@@ -162,7 +162,7 @@ class TestEJU1(unittest.TestCase):
         ej_u1.ejercicio_14()
         self.assertEqual(
             mock_stdout.getvalue(),
-            "\nLos divisores de 4 son:  1 2\n"+
+            "\nLos divisores de 4 son:  1 2\n" +
             "Nota: los divisores no son necesariamnete primos\n"
         )
 
@@ -173,7 +173,7 @@ class TestEJU1(unittest.TestCase):
         ej_u1.ejercicio_14()
         self.assertEqual(
             mock_stdout.getvalue(),
-            "\nLos divisores de 9 son:  1 3\n"+
+            "\nLos divisores de 9 son:  1 3\n" +
             "Nota: los divisores no son necesariamnete primos\n"
         )
 
@@ -184,7 +184,7 @@ class TestEJU1(unittest.TestCase):
         ej_u1.ejercicio_14()
         self.assertEqual(
             mock_stdout.getvalue(),
-            "\nLos divisores de 25 son:  1 5\n"+
+            "\nLos divisores de 25 son:  1 5\n" +
             "Nota: los divisores no son necesariamnete primos\n"
         )
 
@@ -195,7 +195,7 @@ class TestEJU1(unittest.TestCase):
         ej_u1.ejercicio_14()
         self.assertEqual(
             mock_stdout.getvalue(),
-            "\nLos divisores de 49 son:  1 7\n"+
+            "\nLos divisores de 49 son:  1 7\n" +
             "Nota: los divisores no son necesariamnete primos\n"
         )
 
@@ -206,7 +206,7 @@ class TestEJU1(unittest.TestCase):
         ej_u1.ejercicio_14()
         self.assertEqual(
             mock_stdout.getvalue(),
-            "\nLos divisores de 210 son:  1 2 3 5 6 7 10 14 15 21 30 35 42 70 105\n"+
+            "\nLos divisores de 210 son:  1 2 3 5 6 7 10 14 15 21 30 35 42 70 105\n" +
             "Nota: los divisores no son necesariamnete primos\n"
         )
 
@@ -340,7 +340,7 @@ class TestEJU1(unittest.TestCase):
             "1\n22\n333\n4444\n55555\n666666\n7777777\n88888888\n999999999\n\n"
         )
 
-    # paso hacer prueba manual 
+    # paso hacer prueba manual
 
 if __name__ == "__main__":
     unittest.main()

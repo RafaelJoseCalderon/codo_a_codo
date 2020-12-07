@@ -1,9 +1,9 @@
 import unittest
 import ej_u2
 
-from io            import StringIO
+from io import StringIO
 from unittest.mock import patch
-from math          import pi
+from math import pi
 
 class TestEJU2(unittest.TestCase):
 
@@ -58,9 +58,9 @@ class TestEJU2(unittest.TestCase):
         ej_u2.operaciones(20, 10)
         self.assertEqual(
             mock_stdout.getvalue(),
-            "La suma es:      30.000000\n"+
-            "La resta es:     10.000000\n"+
-            "El producto es:  200.000000\n"+
+            "La suma es:      30.000000\n" +
+            "La resta es:     10.000000\n" +
+            "El producto es:  200.000000\n" +
             "El cociente es:  2.000000\n"
         )
 
@@ -69,15 +69,15 @@ class TestEJU2(unittest.TestCase):
         ej_u2.tabla_de_multiplicar(5)
         self.assertEqual(
             mock_stdout.getvalue(),
-            "5 * 1 = 5\n"+
-            "5 * 2 = 10\n"+
-            "5 * 3 = 15\n"+
-            "5 * 4 = 20\n"+
-            "5 * 5 = 25\n"+
-            "5 * 6 = 30\n"+
-            "5 * 7 = 35\n"+
-            "5 * 8 = 40\n"+
-            "5 * 9 = 45\n"+
+            "5 * 1 = 5\n" +
+            "5 * 2 = 10\n" +
+            "5 * 3 = 15\n" +
+            "5 * 4 = 20\n" +
+            "5 * 5 = 25\n" +
+            "5 * 6 = 30\n" +
+            "5 * 7 = 35\n" +
+            "5 * 8 = 40\n" +
+            "5 * 9 = 45\n" +
             "5 * 10 = 50\n"
         )
 
@@ -141,8 +141,8 @@ class TestEJU2(unittest.TestCase):
         ej_u2.ejercicio_11()
         self.assertEqual(
             mock_stdout.getvalue(),
-            "El resultado es 1\n"+
-            "El resultado es 2\n"+
+            "El resultado es 1\n" +
+            "El resultado es 2\n" +
             "El resultado es 120\n"
         )
 
@@ -151,7 +151,7 @@ class TestEJU2(unittest.TestCase):
         ej_u2.ejercicio_12()
         self.assertEqual(
             mock_stdout.getvalue(),
-            "1:1\n1:2\n1:3\n1:4\n1:5\n1:6\n2:2\n2:3\n2:4\n2:5\n2:6\n"+
+            "1:1\n1:2\n1:3\n1:4\n1:5\n1:6\n2:2\n2:3\n2:4\n2:5\n2:6\n" +
             "3:3\n3:4\n3:5\n3:6\n4:4\n4:5\n4:6\n5:5\n5:6\n6:6\n"
         )
 
@@ -160,7 +160,7 @@ class TestEJU2(unittest.TestCase):
         ej_u2.ejercicio_13(6)
         self.assertEqual(
             mock_stdout.getvalue(),
-            "1:1\n1:2\n1:3\n1:4\n1:5\n1:6\n2:2\n2:3\n2:4\n2:5\n2:6\n"+
+            "1:1\n1:2\n1:3\n1:4\n1:5\n1:6\n2:2\n2:3\n2:4\n2:5\n2:6\n" +
             "3:3\n3:4\n3:5\n3:6\n4:4\n4:5\n4:6\n5:5\n5:6\n6:6\n"
         )
 
@@ -187,10 +187,10 @@ class TestEJU2(unittest.TestCase):
         ej_u2.ejercicio_16(5)
         self.assertEqual(
             mock_stdout.getvalue(),
-            "1 0 0 0 0 \n"+
-            "0 1 0 0 0 \n"+
-            "0 0 1 0 0 \n"+
-            "0 0 0 1 0 \n"+
+            "1 0 0 0 0 \n" +
+            "0 1 0 0 0 \n" +
+            "0 0 1 0 0 \n" +
+            "0 0 0 1 0 \n" +
             "0 0 0 0 1 \n\n"
         )
 
@@ -230,9 +230,25 @@ class TestEJU2(unittest.TestCase):
 
     def test_diferencia_365_30(self):
         self.assertEqual(
-            ej_u2.diferencia_365_30("28/11/2020", "15/06/2025"),
-            {'anios': 4, 'meses': 6, 'dias': 20}
-        )
+            ej_u2.diferencia_365_30("28/02/2020", "28/02/2021"),
+            {'anios': 1, 'meses': 0, 'dias': 1}
+        )  # por ser 2020 bisiesto => dias = 1
+        self.assertEqual(
+            ej_u2.diferencia_365_30("28/02/2020", "28/02/2022"),
+            {'anios': 2, 'meses': 0, 'dias': 1}
+        )  # por ser 2020 bisiesto
+        self.assertEqual(
+            ej_u2.diferencia_365_30("28/02/2020", "28/02/2025"),
+            {'anios': 5, 'meses': 0, 'dias': 2}
+        )  # por ser 2020 y 2024 bisiestos => dias = 2
+        self.assertEqual(
+            ej_u2.diferencia_365_30("28/02/2020", "28/03/2025"),
+            {'anios': 5, 'meses': 1, 'dias': 0}
+        )  # por ser 2020 y 2024 bisiestos => dias = 0 xq 28 + 2 = 30
+        self.assertEqual(
+            ej_u2.diferencia_365_30("28/02/2020", "31/03/2025"),
+            {'anios': 5, 'meses': 1, 'dias': 3}
+        )  # por ser 2020 y 2024 bisiestos => dias = 0 xq 28 + 2 = 30
 
     def test_ejercicio_18(self):
         self.assertEqual(ej_u2.ejercicio_18(1), "lunes")
@@ -311,7 +327,231 @@ class TestEJU2(unittest.TestCase):
     @patch("builtins.input", side_effect=["20", "4"])
     def test_ejercicio_20_6(self, mock_input, mock_stdout):
         ej_u2.ejercicio_20()
-        self.assertEqual(mock_stdout.getvalue(),"Tu signo es: aries\n")
+        self.assertEqual(mock_stdout.getvalue(), "Tu signo es: aries\n")
+
+    @patch("sys.stdout", new_callable=StringIO)
+    @patch("builtins.input", side_effect=["1", "2", "3", "4", "-1"])
+    def test_ejercicio_21(self, mock_input, mock_stdout):
+        ej_u2.ejercicio_21()
+        self.assertEqual(mock_stdout.getvalue(), "El promedio es: 2.5\n")
+
+    @patch("sys.stdout", new_callable=StringIO)
+    @patch("builtins.input", return_value=60984)
+    def test_ejercicio_22(self, mock_input, mock_stdout):
+        ej_u2.ejercicio_22()
+        self.assertEqual(mock_stdout.getvalue(),
+                         "El resultado es: 2^3 * 3^2 * 7^1 * 11^2\n")
+
+    @patch("sys.stdout", new_callable=StringIO)
+    @patch("builtins.input", side_effect=["1", "2", "3", "123456"])
+    def test_ejercicio_23_1(self, mock_input, mock_stdout):
+        ej_u2.ejercicio_23_1()
+        self.assertEqual(mock_stdout.getvalue(), "Puede continuar\n")
+
+    @patch("sys.stdout", new_callable=StringIO)
+    @patch("builtins.input", side_effect=["1", "2", "123456"])
+    def test_ejercicio_23_2_1(self, mock_input, mock_stdout):
+        ej_u2.ejercicio_23_2()
+        self.assertEqual(mock_stdout.getvalue(), "Puede continuar\n")
+
+    @patch("sys.stdout", new_callable=StringIO)
+    @patch("builtins.input", side_effect=["1", "2", "3", "4"])
+    def test_ejercicio_23_2_2(self, mock_input, mock_stdout):
+        ej_u2.ejercicio_23_2()
+        self.assertEqual(
+            mock_stdout.getvalue(),
+            "Ha superado el numero de intentos permitidos\n"
+        )
+
+    # No se me ocurre como testear tiempos.
+    # No se me ocurre como testear tiempos.
+
+    def test_ejercicio_24_1(self):
+        self.assertEqual(ej_u2.ejercicio_24_1(6),    6)
+        self.assertEqual(ej_u2.ejercicio_24_1(28),   28)
+        self.assertEqual(ej_u2.ejercicio_24_1(496),  496)
+        self.assertEqual(ej_u2.ejercicio_24_1(8128), 8128)
+
+    @patch("sys.stdout", new_callable=StringIO)
+    def test_ejercicio_24_2(self, mock_stdout):
+        ej_u2.ejercicio_24_2(3)
+        self.assertEqual(mock_stdout.getvalue(), "6\n28\n496\n")
+
+    # ----------------------------------------------------------
+    # ejercicio_24_3
+    # ----------------------------------------------------------
+
+    @patch("sys.stdout", new_callable=StringIO)
+    @patch("builtins.input", side_effect=["1", "2", "3", "4", "-1"])
+    def test_ejercicio_25(self, mock_input, mock_stdout):
+        ej_u2.ejercicio_25()
+        self.assertEqual(
+            mock_stdout.getvalue(),
+            "La cantidad de numeros ingresados es: 4\n" +
+            "La suma de numeros ingresados es:     10\n" +
+            "La promedio de numeros ingresados es: 2.5\n"
+        )
+
+    def test_ejercicio_26_a(self):
+        self.assertEqual(ej_u2.ejercicio_26_a(20, 100), 5)
+
+    def test_ejercicio_26_b(self):
+        self.assertEqual(ej_u2.ejercicio_26_b(20, 100), 5)
+
+    @patch("sys.stdout", new_callable=StringIO)
+    def test_ejercicio_27(self, mock_stdout):
+        ej_u2.ejercicio_27(100)
+        self.assertEqual(
+            mock_stdout.getvalue(),
+            "2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, " +
+            "43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, \n"
+        )
+
+    # ----------------------------------------------------------
+    # ejercicio_29
+    # ----------------------------------------------------------
+
+    @patch("sys.stdout", new_callable=StringIO)
+    def test_ejercicio_30_a(self, mock_stdout):
+        ej_u2.ejercicio_30_a("cadena")
+        self.assertEqual(mock_stdout.getvalue(), "ca\n")
+
+    @patch("sys.stdout", new_callable=StringIO)
+    def test_ejercicio_30_b(self, mock_stdout):
+        ej_u2.ejercicio_30_b("cadena")
+        self.assertEqual(mock_stdout.getvalue(), "ena\n")
+
+    @patch("sys.stdout", new_callable=StringIO)
+    def test_ejercicio_30_c(self, mock_stdout):
+        ej_u2.ejercicio_30_c("recta")
+        self.assertEqual(mock_stdout.getvalue(), "rca\n")
+
+    @patch("sys.stdout", new_callable=StringIO)
+    def test_ejercicio_30_d(self, mock_stdout):
+        ej_u2.ejercicio_30_d("hola mundo!")
+        self.assertEqual(mock_stdout.getvalue(), "!odnum aloh\n")
+
+    @patch("sys.stdout", new_callable=StringIO)
+    def test_ejercicio_30_e(self, mock_stdout):
+        ej_u2.ejercicio_30_e("reflejo")
+        self.assertEqual(mock_stdout.getvalue(), "reflejoojelfer\n")
+
+    @patch("sys.stdout", new_callable=StringIO)
+    def test_ejercicio_31_a(self, mock_stdout):
+        ej_u2.ejercicio_31_a("separar", ",")
+        self.assertEqual(mock_stdout.getvalue(), "s,e,p,a,r,a,r\n")
+
+    @patch("sys.stdout", new_callable=StringIO)
+    def test_ejercicio_31_b(self, mock_stdout):
+        ej_u2.ejercicio_31_b("mi archivo de texto.txt")
+        self.assertEqual(mock_stdout.getvalue(), "mi_archivo_de_texto.txt\n")
+
+    @patch("sys.stdout", new_callable=StringIO)
+    def test_ejercicio_31_c(self, mock_stdout):
+        ej_u2.ejercicio_31_c("su clave es: 1540", "X")
+        self.assertEqual(mock_stdout.getvalue(), "su clave es: XXXX\n")
+
+    @patch("sys.stdout", new_callable=StringIO)
+    def test_ejercicio_31_d(self, mock_stdout):
+        ej_u2.ejercicio_31_d("2552552550", ".")
+        self.assertEqual(mock_stdout.getvalue(), "255.255.255.0\n")
+
+    # ----------------------------------------------------------
+    # ejercicio_32
+    # ----------------------------------------------------------
+
+    @patch("sys.stdout", new_callable=StringIO)
+    def test_ejercicio_33_1(self, mock_stdout):
+        ej_u2.ejercicio_33(1234567890)
+        self.assertEqual(mock_stdout.getvalue(), "1.234.567.890\n")
+
+    @patch("sys.stdout", new_callable=StringIO)
+    def test_ejercicio_33_2(self, mock_stdout):
+        ej_u2.ejercicio_33(12345678901234567890)
+        self.assertEqual(
+            mock_stdout.getvalue(),
+            "12.345.678.901.234.567.890\n"
+        )
+
+    @patch("sys.stdout", new_callable=StringIO)
+    def test_ejercicio_33_3(self, mock_stdout):
+        ej_u2.ejercicio_33(123456789012345678901234567890)
+        self.assertEqual(
+            mock_stdout.getvalue(),
+            "123.456.789.012.345.678.901.234.567.890\n"
+        )
+
+    @patch("sys.stdout", new_callable=StringIO)
+    def test_ejercicio_34_a(self, mock_stdout):
+        ej_u2.ejercicio_34_a("Universal Serial Bus")
+        self.assertEqual(mock_stdout.getvalue(), "USB\n")
+
+    @patch("sys.stdout", new_callable=StringIO)
+    def test_ejercicio_34_b(self, mock_stdout):
+        ej_u2.ejercicio_34_b("república argentina")
+        self.assertEqual(mock_stdout.getvalue(), "República Argentina \n")
+
+    @patch("sys.stdout", new_callable=StringIO)
+    def test_ejercicio_34_c(self, mock_stdout):
+        ej_u2.ejercicio_34_c("Antes de ayer")
+        self.assertEqual(mock_stdout.getvalue(), "Antes ayer \n")
+
+    @patch("sys.stdout", new_callable=StringIO)
+    def test_ejercicio_35_a_1(self, mock_stdout):
+        ej_u2.ejercicio_35_a("algoritmos")
+        self.assertEqual(mock_stdout.getvalue(), "lgrtms\n")
+
+    @patch("sys.stdout", new_callable=StringIO)
+    def test_ejercicio_35_a_2(self, mock_stdout):
+        ej_u2.ejercicio_35_a("logaritmos")
+        self.assertEqual(mock_stdout.getvalue(), "lgrtms\n")
+
+    @patch("sys.stdout", new_callable=StringIO)
+    def test_ejercicio_35_b(self, mock_stdout):
+        ej_u2.ejercicio_35_b("sin consonantes")
+        self.assertEqual(mock_stdout.getvalue(), "i ooae\n")
+
+    @patch("sys.stdout", new_callable=StringIO)
+    def test_ejercicio_35_c(self, mock_stdout):
+        ej_u2.ejercicio_35_c("vestuario")
+        self.assertEqual(mock_stdout.getvalue(), "vistaerou\n")
+
+    def test_ejercicio_35_d_1(self):
+        self.assertEqual(ej_u2.ejercicio_35_d("anita lava la tina"), True)
+
+    def test_ejercicio_35_d_2(self):
+        self.assertEqual(ej_u2.ejercicio_35_d("anita no lava la tina"), False)
+
+    def test_ejercicio_36_a_1(self):
+        self.assertEqual(ej_u2.ejercicio_36_a("cadena", "subcadena"), True)
+
+    def test_ejercicio_36_a_2(self):
+        self.assertEqual(ej_u2.ejercicio_36_a("No es subcadena", "subcadena"), False)
+
+    @patch("sys.stdout", new_callable=StringIO)
+    def test_ejercicio_36_b(self, mock_stdout):
+        ej_u2.ejercicio_36_b("kde", "gnome")
+        self.assertEqual(mock_stdout.getvalue(), "gnome\n")
+
+    @patch("sys.stdout", new_callable=StringIO)
+    def test_ejercicio_37(self, mock_stdout):
+        ej_u2.ejercicio_37("11001")
+        self.assertEqual(mock_stdout.getvalue(), "25\n")
+
+    @patch("sys.stdout", new_callable=StringIO)
+    @patch("builtins.input", side_effect=[10])
+    def test_pedir_entero_1(self, mock_input, mock_stdout):
+        ej_u2.pedir_entero("¿Cuál es tu número favorito?", -50, 50)
+        self.assertEqual(mock_stdout.getvalue(), "10\n")
+
+    @patch("sys.stdout", new_callable=StringIO)
+    @patch("builtins.input", side_effect=["hola", -60, 51, -16])
+    def test_pedir_entero_2(self, mock_input, mock_stdout):
+        ej_u2.pedir_entero("¿Cuál es tu número favorito?", -50, 50)
+        self.assertEqual(
+            mock_stdout.getvalue(),
+            "Por favor ingresa un número entre -50 y 50 \n-16\n"
+        )
 
 if __name__ == "__main__":
     unittest.main()

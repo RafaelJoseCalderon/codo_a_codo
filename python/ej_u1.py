@@ -29,7 +29,7 @@ def ejercicio_5():
 def ejercicio_6():
     maximo = int(input("Escriba un entero: "))
 
-    for n in range(2):
+    for _ in range(2):
         numero = int(input("Escriba un entero: "))
 
         if numero > maximo:
@@ -44,7 +44,8 @@ def ejercicio_7():
         print("No es divisible por 2")
 
 def ejercicio_8():
-    print("La letra 'a' aparece, %d veces" % input("Escriba un frase: ").count("a"))
+    print("La letra 'a' aparece, %d veces" %
+          input("Escriba un frase: ").count("a"))
 
 def ejercicio_9():
     vocales = ["a", "e", "i", "o", "u", "á", "é", "í", "ó", "ú"]
@@ -196,7 +197,7 @@ def ejercicio_21():
 def ejercicio_22():
     letras = [
         "T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B",
-        "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E"
+        "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E",
     ]
 
     lectura = input("Ingrese su DNI ")
@@ -246,7 +247,7 @@ def piramide(inicio, fin, paso):
     for i in range(inicio, fin, paso):
         cadena = ""
 
-        for j in range(i):
+        for _ in range(i):
             cadena += str(i)
 
         salida += cadena + "\n"
