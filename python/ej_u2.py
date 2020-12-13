@@ -499,7 +499,7 @@ def ejercicio_35_c(cadena):
     outtab = "eiouaEIOUA"
     trantab = str.maketrans(intab, outtab)
 
-    print (cadena.translate(trantab))
+    print(cadena.translate(trantab))
 
 def ejercicio_35_d(cadena):
     cadena = cadena.upper().replace(" ", "")
