@@ -1,0 +1,92 @@
+html {
+	height: 100%;
+}
+
+* {
+	font-family: "DejaVu Serif";
+}
+
+h1,
+.h1 {
+	text-shadow: 0.2rem 0.2rem 0.2rem #000;
+}
+
+.h1 {
+	font-size: 1.75rem;
+}
+
+h4 {
+	text-shadow: 0.1rem 0.1rem 0.1rem #000;
+}
+
+nav .btn {
+	border-radius: 2rem;
+	border-color: white !important;
+}
+
+@media (min-width: 992px) {
+	.py-2 {
+		padding: 2.6rem 0 !important
+	}
+
+	.border {
+		border-color: #9e7465 !important;
+	}
+
+	h1 {
+		box-shadow: 0 0 0.125rem 0.125rem rgba(101, 63, 50, 0.45);
+	}
+
+	nav {
+		border-radius: 2rem;
+	}
+}
+
+footer a:hover {
+	color: #cc8870;
+}
+
+img {
+	object-fit: cover;
+	width: 16rem;
+	height: 16rem;
+}
+
+/**############################################################################################################## */
+/*  index */
+.carousel,
+.carousel-item img {
+	width: 16rem;
+	height: 7.5rem;
+}
+
+@media (min-width: 576px) {
+
+	.carousel,
+	.carousel-item img {
+		width: 25rem;
+		height: 12.5rem;
+	}
+}
+
+@media (min-width: 992px) {
+
+	.carousel,
+	.carousel-item img {
+		width: 50rem;
+		height: 18.75rem;
+	}
+}
+
+/**############################################################################################################## */
+/*  location */
+.card {
+	object-fit: cover;
+	width: 16rem;
+	height: 16rem;
+}
+
+iframe {
+	width: 15.875rem;
+	height: 12.9375rem;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Chocolates</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/mis-colores.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+</head>
+
+<body class="d-flex flex-column m-0 h-100">
+	{% include 'header.html'%}
+
+	<div class="media-body row align-content-start align-content-md-stretch
+				align-content-lg-start align-content-xl-start
+				w-100 m-0 px-lg-5 px-xl-5">
+		{% include 'nav-bar.html'%}
+
+		<main class="col-lg-12 col-md-8 col-sm-12"> <br>
+			{% include 'carrusel.html'%}
+			
+			<section class="my-4">
+				<h5 class="p-1 text-white bc-marron-2">seccion 1</h5>
+				<div class="d-flex flex-wrap justify-content-around">
+					<a class="m-2 text-decoration-none text-black-50" href="productos/caprichos.html">
+						<img class="rounded border shadow-lg bg-white"
+							src="{% static 'imagenes/productos/caprichos.jpg' %}" alt="imagen no disponible">
+						<h4 class="mt-n5 text-center">caprichos</h4>
+					</a>
+					<a class="m-2 text-decoration-none text-black-50" href="productos/lujuria-tropical.html">
+						<img class="rounded border shadow-lg bg-white"
+							src="{% static 'imagenes/productos/lujuria-tropical.jpg' %}" alt="imagen no disponible">
+						<h4 class="mt-n5 text-center">lujuria-tropical</h4>
+					</a>
+					<a class="m-2 text-decoration-none text-black-50" href="productos/patagonia.html">
+						<img class="rounded border shadow-lg bg-white"
+							src="{% static 'imagenes/productos/patagonia.jpg' %}" alt="imagen no disponible">
+						<h4 class="mt-n5 text-center">patagonia</h4>
+					</a>
+				</div>
+			</section>
+			
+			<section class="my-4">
+				<h5 class="p-1 text-white bc-marron-2">seccion 2</h5>
+				<div class="d-flex flex-wrap justify-content-around">
+					<a class="m-2 text-decoration-none text-black-50" href="productos/trinidad-almendras.html">
+						<img class="rounded border shadow-lg bg-white"
+							src="{% static 'imagenes/productos/trinidad-almendra.jpg' %}" alt="imagen no disponible">
+						<h4 class="mt-n5 text-center">trinidad-almendra</h4>
+					</a>
+					<a class="m-2 text-decoration-none text-black-50" href="productos/trufas-golosas.html">
+						<img class="rounded border shadow-lg bg-white"
+							src="{% static 'imagenes/productos/trufas-golosa.jpg' %}" alt="imagen no disponible">
+						<h4 class="mt-n5 text-center">trufas-golosa</h4>
+					</a>
+					<a class="m-2 text-decoration-none text-black-50" href="productos/volcan-chocolate.html">
+						<img class="rounded border shadow-lg bg-white"
+							src="{% static 'imagenes/productos/volcan-de-chocolate.jpeg' %}" alt="imagen no disponible">
+						<h4 class="mt-n5 text-center">volcan-chocolate</h4>
+					</a>
+				</div>
+			</section>
+		</main>
+	</div>
+
+	{% include 'footer.html'%}
+</body>
+
+</html>
